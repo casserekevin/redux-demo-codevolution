@@ -1,7 +1,7 @@
 const redux = require('redux')
 const reduxLogger = require('redux-logger')
 
-//Action
+//Actions
 const BUY_CAKE = 'BUY_CAKE'
 const BUY_ICECREAM = 'BUY_ICECREAM'
 
@@ -20,14 +20,7 @@ function buyIceCream(){
 }
 
 
-
-//Reducer
-// reducer(previousState, action) => newState
-// const initialState = {
-//     numOfCakes: 10,
-//     numOfIceCreams: 20
-// }
-
+//Initial states
 const initialCakeState = {
     numOfCakes: 10,
 }
@@ -36,6 +29,7 @@ const InitialIceCreamState = {
     numOfIceCreams: 20
 }
 
+//Reducers
 const cakeReducer = (state = initialCakeState, action) => {
     switch(action.type) {
         case BUY_CAKE:
